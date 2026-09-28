@@ -391,6 +391,7 @@ local function GetClosestPlayerWithBall()
 end
 
 RunService.RenderStepped:Connect(function()
+    -- Master toggle must be ON
     if not Toggles.AutoGuard.Value then
         CurrentTarget = nil
         return
@@ -402,11 +403,11 @@ RunService.RenderStepped:Connect(function()
     local humanoid = character:FindFirstChild("Humanoid")
     if not hrp or not humanoid then return end
 
+    -- Only run the actual logic while holding G / mobile / LT
     local holdingG = UserInputService:IsKeyDown(Enum.KeyCode.G)
     local holdingTrigger = UserInputService:IsKeyDown(Enum.KeyCode.ButtonL2)
-    local active = Toggles.AutoGuard.Value or holdingG or mobileHolding or holdingTrigger
 
-    if not active then
+    if not (holdingG or mobileHolding or holdingTrigger) then
         CurrentTarget = nil
         return
     end
