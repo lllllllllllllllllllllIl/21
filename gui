@@ -11,164 +11,143 @@ local Toggles = Library.Toggles
 -- WINDOW + TABS
 --========================================================--
 local Window = Library:CreateWindow({
-    Title = "Vision Hub",
-    Footer = "Vision System",
-    Icon = 95816097006870,
-    NotifySide = "Right",
-    ShowCustomCursor = true,
+    Title = "Vision Hub",
+    Footer = "Vision System",
+    Icon = 95816097006870,
+    NotifySide = "Right",
+    ShowCustomCursor = true,
 })
 local Tabs = {
-    Offense = Window:AddTab("Offense", "activity"),
-    Defense = Window:AddTab("Defense", "shield"),
-    Misc = Window:AddTab("Misc", "box"),
-    ["UI Settings"] = Window:AddTab("UI Settings", "settings"),
+    Offense = Window:AddTab("Offense", "activity"),
+    Defense = Window:AddTab("Defense", "shield"),
+    Misc = Window:AddTab("Misc", "box"),
+    ["UI Settings"] = Window:AddTab("UI Settings", "settings"),
 }
 --========================================================--
 -- OFFENSE
 --========================================================--
 local OffenseGroup = Tabs.Offense:AddLeftGroupbox("Offense")
 OffenseGroup:AddToggle("AutoPerfect", {
-    Text = "Auto Perfect",
-    Default = false,
+    Text = "Auto Perfect",
+    Default = false,
 })
 OffenseGroup:AddToggle("SpeedWithBall", {
-    Text = "Speed With Ball",
-    Default = false,
+    Text = "Speed With Ball",
+    Default = false,
 })
 OffenseGroup:AddSlider("SpeedWithBallAmount", {
-    Text = "Speed With Ball",
-    Default = 50,
-    Min = 1,
-    Max = 99,
-    Rounding = 0,
+    Text = "Speed With Ball",
+    Default = 50,
+    Min = 1,
+    Max = 99,
+    Rounding = 0,
 })
 OffenseGroup:AddToggle("IncreaseGreenWindow", {
-    Text = "Increase Green Window",
-    Default = false,
+    Text = "Increase Green Window",
+    Default = false,
 })
 --========================================================--
 -- DEFENSE
 --========================================================--
 local DefenseGroup = Tabs.Defense:AddLeftGroupbox("Defense")
 DefenseGroup:AddToggle("AutoGuard", {
-    Text = "Auto Guard",
-    Default = false,
+    Text = "Auto Guard",
+    Default = false,
 })
 DefenseGroup:AddSlider("GuardDistance", {
-    Text = "Guard Distance",
-    Default = 8,
-    Min = 1,
-    Max = 20,
-    Rounding = 0,
+    Text = "Guard Distance",
+    Default = 8,
+    Min = 1,
+    Max = 20,
+    Rounding = 0,
 })
 DefenseGroup:AddSlider("PredictionStuds", {
-    Text = "Prediction Studs",
-    Default = 8,
-    Min = 1,
-    Max = 20,
-    Rounding = 0,
+    Text = "Prediction Studs",
+    Default = 8,
+    Min = 1,
+    Max = 20,
+    Rounding = 0,
 })
 DefenseGroup:AddSlider("MinDistance", {
-    Text = "Min Distance",
-    Default = 5,
-    Min = 1,
-    Max = 20,
-    Rounding = 0,
+    Text = "Min Distance",
+    Default = 5,
+    Min = 1,
+    Max = 20,
+    Rounding = 0,
 })
 DefenseGroup:AddToggle("AutoBlock", {
-    Text = "Auto Block",
-    Default = false,
-})
-DefenseGroup:AddSlider("AutoBlockDistance", {
-    Text = "Auto Block Distance",
-    Default = 5,
-    Min = 1,
-    Max = 10,
-    Rounding = 0,
-})
-DefenseGroup:AddSlider("AutoBlockDelay", {
-    Text = "Auto Block Delay",
-    Default = 0.1,
-    Min = 0.1,
-    Max = 1.0,
-    Rounding = 1,
+    Text = "Auto Block",
+    Default = false,
 })
 DefenseGroup:AddToggle("BlockStealExtender", {
-    Text = "Block & Steal Extender",
-    Default = false,
-})
-DefenseGroup:AddSlider("BlockStealSize", {
-    Text = "Block & Steal Size",
-    Default = 30,
-    Min = 1,
-    Max = 30,
-    Rounding = 0,
+    Text = "Block & Steal Extender",
+    Default = false,
 })
 DefenseGroup:AddToggle("BallMag", {
-    Text = "Ball Mag",
-    Default = false,
+    Text = "Ball Mag",
+    Default = false,
 })
 DefenseGroup:AddSlider("BallMagSize", {
-    Text = "Ball Mag Size",
-    Default = 15,
-    Min = 1,
-    Max = 20,
-    Rounding = 0,
+    Text = "Ball Mag Size",
+    Default = 15,
+    Min = 1,
+    Max = 20,
+    Rounding = 0,
 })
 --========================================================--
 -- MISC
 --========================================================--
 local MiscGroup = Tabs.Misc:AddLeftGroupbox("Misc")
 MiscGroup:AddToggle("InfiniteStamina", {
-    Text = "Infinite Stamina",
-    Default = false,
+    Text = "Infinite Stamina",
+    Default = false,
 })
 MiscGroup:AddToggle("AutoSprint", {
-    Text = "Auto Sprint",
-    Default = false,
+    Text = "Auto Sprint",
+    Default = false,
 })
 MiscGroup:AddToggle("CframeSpeed", {
-    Text = "Cframe Speed",
-    Default = false,
+    Text = "Cframe Speed",
+    Default = false,
 })
 MiscGroup:AddSlider("CframeSpeedAmount", {
-    Text = "Cframe Speed",
-    Default = 0.50,
-    Min = 0.00,
-    Max = 1.00,
-    Rounding = 2,
+    Text = "Cframe Speed",
+    Default = 0.50,
+    Min = 0.00,
+    Max = 1.00,
+    Rounding = 2,
 })
 MiscGroup:AddToggle("AntiFatigue", {
-    Text = "Anti Fatigue",
-    Default = false,
+    Text = "Anti Fatigue",
+    Default = false,
 })
 MiscGroup:AddToggle("AntiAnkleBroken", {
-    Text = "Anti Ankle Broken",
-    Default = false,
+    Text = "Anti Ankle Broken",
+    Default = false,
 })
 MiscGroup:AddToggle("AntiPush", {
-    Text = "Anti Push",
-    Default = false,
+    Text = "Anti Push",
+    Default = false,
 })
 --========================================================--
 -- UI SETTINGS
 --========================================================--
 local MenuGroup = Tabs["UI Settings"]:AddLeftGroupbox("Menu")
 MenuGroup:AddToggle("ShowCustomCursor", {
-    Text = "Custom Cursor",
-    Default = true,
-    Callback = function(Value)
-        Library.ShowCustomCursor = Value
-    end,
+    Text = "Custom Cursor",
+    Default = true,
+    Callback = function(Value)
+        Library.ShowCustomCursor = Value
+    end,
 })
 MenuGroup:AddLabel("Menu bind")
-    :AddKeyPicker("MenuKeybind", {
-        Default = "LeftControl",
-        NoUI = true,
-        Text = "Menu keybind"
-    })
+    :AddKeyPicker("MenuKeybind", {
+        Default = "LeftControl",
+        NoUI = true,
+        Text = "Menu keybind"
+    })
 MenuGroup:AddButton("Unload", function()
-    Library:Unload()
+    Library:Unload()
 end)
 Library.ToggleKeybind = Library.Options.MenuKeybind
 ThemeManager:SetLibrary(Library)
@@ -185,14 +164,13 @@ ThemeManager:ApplyToTab(Tabs["UI Settings"])
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
-local VirtualInputManager = game:GetService("VirtualInputManager")
 local player = Players.LocalPlayer
 local function makeBuffer(bytes)
-    local b = buffer.create(#bytes)
-    for i = 1, #bytes do
-        buffer.writeu8(b, i - 1, bytes[i])
-    end
-    return b
+    local b = buffer.create(#bytes)
+    for i = 1, #bytes do
+        buffer.writeu8(b, i - 1, bytes[i])
+    end
+    return b
 end
 --========================================================--
 -- AUTO PERFECT
@@ -201,307 +179,316 @@ local ARG1 = makeBuffer({ 12, 83, 104, 111, 111, 116, 32, 84, 105, 109, 105, 110
 local ARG2 = makeBuffer({ 0, 0, 200, 66 }) -- float 100
 local ARG3 = makeBuffer({ 4, 68, 111, 119, 110 }) -- "Down"
 local function getShootingValue()
-    local character = player.Character
-    if not character then return nil end
-    local stats = character:FindFirstChild("Stats")
-    if not stats then return nil end
-    local offense = stats:FindFirstChild("Offense")
-    if not offense then return nil end
-    return offense:FindFirstChild("Shooting")
+    local character = player.Character
+    if not character then return nil end
+    local stats = character:FindFirstChild("Stats")
+    if not stats then return nil end
+    local offense = stats:FindFirstChild("Offense")
+    if not offense then return nil end
+    return offense:FindFirstChild("Shooting")
 end
 local function getRemote()
-    local character = player.Character
-    if not character then return nil end
-    local remotes = character:FindFirstChild("Remotes")
-    if not remotes then return nil end
-    return remotes:FindFirstChild("ServerConnection")
+    local character = player.Character
+    if not character then return nil end
+    local remotes = character:FindFirstChild("Remotes")
+    if not remotes then return nil end
+    return remotes:FindFirstChild("ServerConnection")
 end
 local shootingConnection = nil
 local debounce = false
 local function setupAutoPerfect()
-    if shootingConnection then
-        shootingConnection:Disconnect()
-        shootingConnection = nil
-    end
-    local Shooting = getShootingValue()
-    if not Shooting then return end
-    local function onShootingChanged()
-        if not Toggles.AutoPerfect.Value then return end
-        if Shooting.Value == true and not debounce then
-            debounce = true
-            task.wait(0.34)
-            local Event = getRemote()
-            if Event then
-                Event:FireServer(ARG1, ARG2, ARG3)
-            end
-            task.wait(0.1)
-            debounce = false
-        end
-    end
-    shootingConnection = Shooting.Changed:Connect(onShootingChanged)
-    onShootingChanged()
+    if shootingConnection then
+        shootingConnection:Disconnect()
+        shootingConnection = nil
+    end
+    local Shooting = getShootingValue()
+    if not Shooting then return end
+    local function onShootingChanged()
+        if not Toggles.AutoPerfect.Value then return end
+        if Shooting.Value == true and not debounce then
+            debounce = true
+            task.wait(0.34)
+            local Event = getRemote()
+            if Event then
+                Event:FireServer(ARG1, ARG2, ARG3)
+            end
+            task.wait(0.1)
+            debounce = false
+        end
+    end
+    shootingConnection = Shooting.Changed:Connect(onShootingChanged)
+    onShootingChanged()
 end
 if player.Character then
-    task.spawn(setupAutoPerfect)
+    task.spawn(setupAutoPerfect)
 end
 player.CharacterAdded:Connect(function()
-    task.wait(1)
-    setupAutoPerfect()
+    task.wait(1)
+    setupAutoPerfect()
 end)
 --========================================================--
 -- SPEED WITH BALL
 --========================================================--
 local function findAndForce(container, targetValue)
-    if not container then return end
-    for _, obj in ipairs(container:GetDescendants()) do
-        if obj:IsA("NumberValue") or obj:IsA("IntValue") then
-            if obj.Name == "Speed" or obj.Name == "SpeedWithBall" or obj.Name == "Acceleration" then
-                pcall(function()
-                    obj.Value = targetValue
-                end)
-            end
-        end
-    end
-    local attrs = {"Speed", "SpeedWithBall", "Acceleration"}
-    for _, name in ipairs(attrs) do
-        if container:GetAttribute(name) ~= nil then
-            pcall(function()
-                container:SetAttribute(name, targetValue)
-            end)
-        end
-    end
+    if not container then return end
+    for _, obj in ipairs(container:GetDescendants()) do
+        if obj:IsA("NumberValue") or obj:IsA("IntValue") then
+            if obj.Name == "Speed" or obj.Name == "SpeedWithBall" or obj.Name == "Acceleration" then
+                pcall(function()
+                    obj.Value = targetValue
+                end)
+            end
+        end
+    end
+    local attrs = {"Speed", "SpeedWithBall", "Acceleration"}
+    for _, name in ipairs(attrs) do
+        if container:GetAttribute(name) ~= nil then
+            pcall(function()
+                container:SetAttribute(name, targetValue)
+            end)
+        end
+    end
 end
 local function forceSpeedValues()
-    if not Toggles.SpeedWithBall.Value then return end
-    local targetValue = Options.SpeedWithBallAmount.Value
-    local character = player.Character
-    if character then
-        findAndForce(character, targetValue)
-        findAndForce(character:FindFirstChild("Humanoid"), targetValue)
-        findAndForce(character:FindFirstChild("Stats"), targetValue)
-        findAndForce(character:FindFirstChild("PlayerStats"), targetValue)
-        findAndForce(character:FindFirstChild("Info"), targetValue)
-        findAndForce(player:FindFirstChild("Stats"), targetValue)
-        findAndForce(player:FindFirstChild("leaderstats"), targetValue)
-    end
-    findAndForce(player, targetValue)
+    if not Toggles.SpeedWithBall.Value then return end
+    local targetValue = Options.SpeedWithBallAmount.Value
+    local character = player.Character
+    if character then
+        findAndForce(character, targetValue)
+        findAndForce(character:FindFirstChild("Humanoid"), targetValue)
+        findAndForce(character:FindFirstChild("Stats"), targetValue)
+        findAndForce(character:FindFirstChild("PlayerStats"), targetValue)
+        findAndForce(character:FindFirstChild("Info"), targetValue)
+        findAndForce(player:FindFirstChild("Stats"), targetValue)
+        findAndForce(player:FindFirstChild("leaderstats"), targetValue)
+    end
+    findAndForce(player, targetValue)
 end
 RunService.Heartbeat:Connect(forceSpeedValues)
 player.CharacterAdded:Connect(function()
-    task.wait(0.5)
-    forceSpeedValues()
+    task.wait(0.5)
+    forceSpeedValues()
 end)
 --========================================================--
 -- INCREASE GREEN WINDOW
 --========================================================--
 local function forceGreenWindow()
-    if not Toggles.IncreaseGreenWindow.Value then return end
-    local target = workspace:FindFirstChild(player.Name)
-    if not target then return end
-    pcall(function()
-        target:SetAttribute("GreenWindowMult", 100000)
-        target:SetAttribute("LiveGreenThreshold", 50)
-        target:SetAttribute("GreenRangeCutoff", -1)
-        target:SetAttribute("MaxGreenRange", 10000)
-    end)
+    if not Toggles.IncreaseGreenWindow.Value then return end
+    local target = workspace:FindFirstChild(player.Name)
+    if not target then return end
+    pcall(function()
+        target:SetAttribute("GreenWindowMult", 100000)
+        target:SetAttribute("LiveGreenThreshold", 50)
+        target:SetAttribute("GreenRangeCutoff", -1)
+        target:SetAttribute("MaxGreenRange", 10000)
+    end)
 end
 RunService.RenderStepped:Connect(forceGreenWindow)
 --========================================================--
 -- AUTO GUARD
 --========================================================--
-local Character = nil
-local HumanoidRootPart = nil
-local Humanoid = nil
 local CurrentTarget = nil
-
-local GuardDistance = 8
-local PredictionStuds = 8
-local MinDistance = 5
-
-local function UpdateCharacter()
-	Character = player.Character or player.CharacterAdded:Wait()
-	HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
-	Humanoid = Character:WaitForChild("Humanoid")
+local mobileHolding = false
+local function setupMobileButton()
+    local playerGui = player:WaitForChild("PlayerGui", 5)
+    if not playerGui then return end
+    local mobileGui = playerGui:FindFirstChild("MobileBasketballControls")
+    if not mobileGui then return end
+    local frame = mobileGui:FindFirstChild("ControlsFrame")
+    if not frame then return end
+    local guardButton = frame:FindFirstChild("GuardButton")
+    if not guardButton then return end
+    guardButton.MouseButton1Down:Connect(function()
+        mobileHolding = true
+    end)
+    guardButton.MouseButton1Up:Connect(function()
+        mobileHolding = false
+    end)
+    guardButton.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.Touch then
+            mobileHolding = true
+        end
+    end)
+    guardButton.InputEnded:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.Touch then
+            mobileHolding = false
+        end
+    end)
 end
-player.CharacterAdded:Connect(UpdateCharacter)
-if player.Character then
-	UpdateCharacter()
-end
-
-local function IsHoldingContest()
-	local ok, value = pcall(function()
-		local charFolder = workspace:FindFirstChild(player.Name)
-		if not charFolder then return false end
-		local stats = charFolder:FindFirstChild("Stats")
-		if not stats then return false end
-		local client = stats:FindFirstChild("Client")
-		if not client then return false end
-		local holding = client:FindFirstChild("HoldingContest")
-		if not holding then return false end
-		return holding.Value
-	end)
-	return ok and value == true
-end
-
+setupMobileButton()
 local function GetClosestPlayerWithBall()
-	local closest = nil
-	local minDist = math.huge
-	if not HumanoidRootPart then return nil end
-	for _, plr in pairs(Players:GetPlayers()) do
-		if plr ~= player
-			and plr.Character
-			and plr.Character:FindFirstChild("HumanoidRootPart") then
-			local hasBall = plr.Character:FindFirstChild("Ball")
-				or plr.Character:FindFirstChild("Basketball")
-			if hasBall then
-				local dist = (plr.Character.HumanoidRootPart.Position - HumanoidRootPart.Position).Magnitude
-				if dist < minDist then
-					minDist = dist
-					closest = plr
-				end
-			end
-		end
-	end
-	return closest
+    local closest = nil
+    local minDist = math.huge
+    local character = player.Character
+    if not character then return nil end
+    local hrp = character:FindFirstChild("HumanoidRootPart")
+    if not hrp then return nil end
+    for _, plr in pairs(Players:GetPlayers()) do
+        if plr ~= player and plr.Character and plr.Character:FindFirstChild("HumanoidRootPart") then
+            local hasBall = plr.Character:FindFirstChild("Ball") or plr.Character:FindFirstChild("Basketball")
+            if hasBall then
+                local dist = (plr.Character.HumanoidRootPart.Position - hrp.Position).Magnitude
+                if dist < minDist then
+                    minDist = dist
+                    closest = plr
+                end
+            end
+        end
+    end
+    return closest
 end
-
 RunService.RenderStepped:Connect(function()
-	if not IsHoldingContest() then
-		CurrentTarget = nil
-		return
-	end
-	if not Character or not HumanoidRootPart or not Humanoid then return end
-	CurrentTarget = GetClosestPlayerWithBall()
-	if CurrentTarget
-		and CurrentTarget.Character
-		and CurrentTarget.Character:FindFirstChild("HumanoidRootPart") then
-		local targetHRP = CurrentTarget.Character.HumanoidRootPart
-		local velocity = targetHRP.AssemblyLinearVelocity
-		local predictedPosition = targetHRP.Position + (velocity * (PredictionStuds / 20))
-		local forwardVec = targetHRP.CFrame.LookVector
-		local idealPosition = predictedPosition + forwardVec * GuardDistance
-		local toTarget = predictedPosition - HumanoidRootPart.Position
-		local flatToTarget = Vector3.new(toTarget.X, 0, toTarget.Z)
-		local currentDist = flatToTarget.Magnitude
-		local moveDirection
-		if currentDist < MinDistance then
-			moveDirection = -flatToTarget
-		else
-			moveDirection = idealPosition - HumanoidRootPart.Position
-			moveDirection = Vector3.new(moveDirection.X, 0, moveDirection.Z)
-		end
-		if moveDirection.Magnitude > 0.4 then
-			Humanoid:Move(moveDirection.Unit, false)
-		else
-			Humanoid:Move(Vector3.zero, false)
-		end
-	end
+    -- Master toggle must be ON
+    if not Toggles.AutoGuard.Value then
+        CurrentTarget = nil
+        return
+    end
+    local character = player.Character
+    if not character then return end
+    local hrp = character:FindFirstChild("HumanoidRootPart")
+    local humanoid = character:FindFirstChild("Humanoid")
+    if not hrp or not humanoid then return end
+    -- Only run the actual logic while holding G / mobile / LT
+    local holdingG = UserInputService:IsKeyDown(Enum.KeyCode.G)
+    local holdingTrigger = UserInputService:IsKeyDown(Enum.KeyCode.ButtonL2)
+    if not (holdingG or mobileHolding or holdingTrigger) then
+        CurrentTarget = nil
+        return
+    end
+    CurrentTarget = GetClosestPlayerWithBall()
+    if CurrentTarget and CurrentTarget.Character and CurrentTarget.Character:FindFirstChild("HumanoidRootPart") then
+        local targetHRP = CurrentTarget.Character.HumanoidRootPart
+        local velocity = targetHRP.AssemblyLinearVelocity
+        local prediction = Options.PredictionStuds.Value
+        local guardDist = Options.GuardDistance.Value
+        local minDist = Options.MinDistance.Value
+        local predictedPosition = targetHRP.Position + (velocity * (prediction / 20))
+        local forwardVec = targetHRP.CFrame.LookVector
+        local idealPosition = predictedPosition + forwardVec * guardDist
+        local toTarget = predictedPosition - hrp.Position
+        local flatToTarget = Vector3.new(toTarget.X, 0, toTarget.Z)
+        local currentDist = flatToTarget.Magnitude
+        local moveDirection
+        if currentDist < minDist then
+            moveDirection = -flatToTarget
+        else
+            moveDirection = idealPosition - hrp.Position
+            moveDirection = Vector3.new(moveDirection.X, 0, moveDirection.Z)
+        end
+        if moveDirection.Magnitude > 0.4 then
+            humanoid:Move(moveDirection.Unit, false)
+        else
+            humanoid:Move(Vector3.zero, false)
+        end
+    end
 end)
-
 player.CharacterAdded:Connect(function()
-	CurrentTarget = nil
+    mobileHolding = false
+    CurrentTarget = nil
+    task.wait(1)
+    setupMobileButton()
 end)
 --========================================================--
 -- AUTO BLOCK
 --========================================================--
-local lastPress = 0
-
-local function getCharacter(plr)
-	return plr and plr.Character
+local function fireJumpEvent()
+    local character = player.Character
+    if not character then return end
+    local remotes = character:FindFirstChild("Remotes")
+    if not remotes then return end
+    local event = remotes:FindFirstChild("ServerConnection")
+    if not event then return end
+    event:FireServer(
+        makeBuffer({ 4, 74, 117, 109, 112 }), -- "Jump"
+        makeBuffer({ 136, 120, 65, 54, 230, 99, 87, 55, 66, 248, 5, 53 })
+    )
 end
-
-local function hasShootingEnabled(character)
-	if not character then return false end
-	local stats = character:FindFirstChild("Stats")
-	if not stats then return false end
-	local offense = stats:FindFirstChild("Offense")
-	if not offense then return false end
-	local shooting = offense:FindFirstChild("Shooting")
-	if not shooting or not shooting:IsA("BoolValue") then return false end
-	return shooting.Value == true
+local function checkDistance(targetChar)
+    local character = player.Character
+    if not character or not targetChar or targetChar == character then return false end
+    local hrp = character:FindFirstChild("HumanoidRootPart")
+    local targetHRP = targetChar:FindFirstChild("HumanoidRootPart")
+    if not hrp or not targetHRP then return false end
+    return (hrp.Position - targetHRP.Position).Magnitude <= 6
 end
-
-local function isWithinRange(char1, char2)
-	if not char1 or not char2 then return false end
-	local hrp1 = char1:FindFirstChild("HumanoidRootPart")
-	local hrp2 = char2:FindFirstChild("HumanoidRootPart")
-	if not hrp1 or not hrp2 then return false end
-	return (hrp1.Position - hrp2.Position).Magnitude <= Options.AutoBlockDistance.Value
+local function onShootingEnabled(targetChar)
+    if not Toggles.AutoBlock.Value then return end
+    if checkDistance(targetChar) then
+        task.wait(0.1)
+        fireJumpEvent()
+    end
 end
-
-local function pressSpace()
-	VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.Space, false, game)
-	task.wait(0.05)
-	VirtualInputManager:SendKeyEvent(false, Enum.KeyCode.Space, false, game)
+local function setupCharacterForBlock(char)
+    if not char or char == player.Character then return end
+    local stats = char:FindFirstChild("Stats")
+    if not stats then return end
+    local offense = stats:FindFirstChild("Offense")
+    if not offense then return end
+    local shooting = offense:FindFirstChild("Shooting")
+    if not shooting or not shooting:IsA("BoolValue") then return end
+    shooting.Changed:Connect(function(value)
+        if value == true then
+            onShootingEnabled(char)
+        end
+    end)
+    if shooting.Value then
+        onShootingEnabled(char)
+    end
 end
-
-RunService.Heartbeat:Connect(function()
-	if not Toggles.AutoBlock.Value then return end
-
-	local now = tick()
-	if now - lastPress < Options.AutoBlockDelay.Value then return end
-
-	local myChar = getCharacter(player)
-	if not myChar then return end
-
-	for _, character in ipairs(workspace:GetChildren()) do
-		if character:IsA("Model") and character ~= myChar then
-			if hasShootingEnabled(character) and isWithinRange(myChar, character) then
-				lastPress = now
-				task.wait(0.1)
-				pressSpace()
-				break
-			end
-		end
-	end
+for _, plr in ipairs(Players:GetPlayers()) do
+    if plr ~= player and plr.Character then
+        setupCharacterForBlock(plr.Character)
+    end
+    plr.CharacterAdded:Connect(setupCharacterForBlock)
+end
+Players.PlayerAdded:Connect(function(plr)
+    plr.CharacterAdded:Connect(setupCharacterForBlock)
 end)
 --========================================================--
 -- BLOCK & STEAL EXTENDER
 --========================================================--
 local function resizeHitbox()
-    if not Toggles.BlockStealExtender.Value then return end
-    local character = workspace:FindFirstChild(player.Name)
-    if not character then return end
-    local hitbox = character:FindFirstChild("BlockHitbox")
-    if hitbox and hitbox:IsA("BasePart") then
-        local size = Options.BlockStealSize.Value
-        hitbox.Size = Vector3.new(size, size, size)
-    end
+    if not Toggles.BlockStealExtender.Value then return end
+    local character = workspace:FindFirstChild(player.Name)
+    if not character then return end
+    local hitbox = character:FindFirstChild("BlockHitbox")
+    if hitbox and hitbox:IsA("BasePart") then
+        hitbox.Size = Vector3.new(30, 30, 30)
+    end
 end
-
 RunService.Heartbeat:Connect(function()
-    if Toggles.BlockStealExtender.Value then
-        resizeHitbox()
-    end
+    if Toggles.BlockStealExtender.Value then
+        resizeHitbox()
+    end
 end)
-
 player.CharacterAdded:Connect(function()
-    task.wait(0.5)
-    resizeHitbox()
+    task.wait(0.5)
+    resizeHitbox()
 end)
 --========================================================--
 -- BALL MAG (with Size slider)
 --========================================================--
 local function applyBallMag(obj)
-    if not Toggles.BallMag.Value then return end
-    if obj.Name == "Basketball" or obj.Name == "Ball" then
-        local size = Options.BallMagSize.Value
-        obj.Size = Vector3.new(size, size, size)
-        obj.Anchored = false
-    end
+    if not Toggles.BallMag.Value then return end
+    if obj.Name == "Basketball" or obj.Name == "Ball" then
+        local size = Options.BallMagSize.Value
+        obj.Size = Vector3.new(size, size, size)
+        obj.Anchored = false
+    end
 end
 workspace.ChildAdded:Connect(function(obj)
-    applyBallMag(obj)
+    applyBallMag(obj)
 end)
+-- Apply to existing balls + when slider/toggle changes
 local function refreshAllBalls()
-    if not Toggles.BallMag.Value then return end
-    local size = Options.BallMagSize.Value
-    for _, obj in ipairs(workspace:GetChildren()) do
-        if obj.Name == "Basketball" or obj.Name == "Ball" then
-            obj.Size = Vector3.new(size, size, size)
-            obj.Anchored = false
-        end
-    end
+    if not Toggles.BallMag.Value then return end
+    local size = Options.BallMagSize.Value
+    for _, obj in ipairs(workspace:GetChildren()) do
+        if obj.Name == "Basketball" or obj.Name == "Ball" then
+            obj.Size = Vector3.new(size, size, size)
+            obj.Anchored = false
+        end
+    end
 end
 Toggles.BallMag:OnChanged(refreshAllBalls)
 Options.BallMagSize:OnChanged(refreshAllBalls)
@@ -509,115 +496,115 @@ Options.BallMagSize:OnChanged(refreshAllBalls)
 -- INFINITE STAMINA
 --========================================================--
 local function getStamina()
-    local character = player.Character
-    if not character then return nil end
-    local stats = character:FindFirstChild("Stats")
-    if not stats then return nil end
-    local main = stats:FindFirstChild("Main")
-    if not main then return nil end
-    return main:FindFirstChild("Stamina")
+    local character = player.Character
+    if not character then return nil end
+    local stats = character:FindFirstChild("Stats")
+    if not stats then return nil end
+    local main = stats:FindFirstChild("Main")
+    if not main then return nil end
+    return main:FindFirstChild("Stamina")
 end
 RunService.Heartbeat:Connect(function()
-    if not Toggles.InfiniteStamina.Value then return end
-    local stamina = getStamina()
-    if stamina and (stamina:IsA("NumberValue") or stamina:IsA("IntValue")) then
-        stamina.Value = 162
-    end
+    if not Toggles.InfiniteStamina.Value then return end
+    local stamina = getStamina()
+    if stamina and (stamina:IsA("NumberValue") or stamina:IsA("IntValue")) then
+        stamina.Value = 162
+    end
 end)
 player.CharacterAdded:Connect(function()
-    task.wait(0.5)
-    if Toggles.InfiniteStamina.Value then
-        local stamina = getStamina()
-        if stamina then
-            stamina.Value = 162
-        end
-    end
+    task.wait(0.5)
+    if Toggles.InfiniteStamina.Value then
+        local stamina = getStamina()
+        if stamina then
+            stamina.Value = 162
+        end
+    end
 end)
 --========================================================--
 -- AUTO SPRINT
 --========================================================--
 local function getSprintingValue()
-    local character = workspace:FindFirstChild(player.Name)
-    if not character then return nil end
-    local stats = character:FindFirstChild("Stats")
-    if not stats then return nil end
-    local client = stats:FindFirstChild("Client")
-    if not client then return nil end
-    return client:FindFirstChild("Sprinting")
+    local character = workspace:FindFirstChild(player.Name)
+    if not character then return nil end
+    local stats = character:FindFirstChild("Stats")
+    if not stats then return nil end
+    local client = stats:FindFirstChild("Client")
+    if not client then return nil end
+    return client:FindFirstChild("Sprinting")
 end
 RunService.Heartbeat:Connect(function()
-    if not Toggles.AutoSprint.Value then return end
-    local sprinting = getSprintingValue()
-    if sprinting then
-        pcall(function()
-            if sprinting:IsA("BoolValue") or sprinting:IsA("NumberValue") then
-                sprinting.Value = true
-            elseif sprinting:GetAttribute("Value") ~= nil then
-                sprinting:SetAttribute("Value", true)
-            end
-        end)
-    end
+    if not Toggles.AutoSprint.Value then return end
+    local sprinting = getSprintingValue()
+    if sprinting then
+        pcall(function()
+            if sprinting:IsA("BoolValue") or sprinting:IsA("NumberValue") then
+                sprinting.Value = true
+            elseif sprinting:GetAttribute("Value") ~= nil then
+                sprinting:SetAttribute("Value", true)
+            end
+        end)
+    end
 end)
 player.CharacterAdded:Connect(function()
-    task.wait(1)
+    task.wait(1)
 end)
 --========================================================--
 -- CFRAME SPEED
 --========================================================--
 RunService.Heartbeat:Connect(function()
-    if not Toggles.CframeSpeed.Value then return end
-    local character = player.Character
-    if not character then return end
-    local humanoid = character:FindFirstChild("Humanoid")
-    local hrp = character:FindFirstChild("HumanoidRootPart")
-    if not humanoid or not hrp then return end
-    local moveDir = humanoid.MoveDirection
-    if moveDir.Magnitude > 0 then
-        local speed = Options.CframeSpeedAmount.Value
-        hrp.CFrame = hrp.CFrame + (moveDir * speed)
-    end
+    if not Toggles.CframeSpeed.Value then return end
+    local character = player.Character
+    if not character then return end
+    local humanoid = character:FindFirstChild("Humanoid")
+    local hrp = character:FindFirstChild("HumanoidRootPart")
+    if not humanoid or not hrp then return end
+    local moveDir = humanoid.MoveDirection
+    if moveDir.Magnitude > 0 then
+        local speed = Options.CframeSpeedAmount.Value
+        hrp.CFrame = hrp.CFrame + (moveDir * speed)
+    end
 end)
 --========================================================--
 -- ANTI FATIGUE
 --========================================================--
 RunService.Heartbeat:Connect(function()
-    if not Toggles.AntiFatigue.Value then return end
-    local character = player.Character
-    if character then
-        character:SetAttribute("Fatigue", 0)
-    end
+    if not Toggles.AntiFatigue.Value then return end
+    local character = player.Character
+    if character then
+        character:SetAttribute("Fatigue", 0)
+    end
 end)
 --========================================================--
 -- ANTI ANKLE BROKEN
 --========================================================--
 local function forceAnkleBroken()
-    if not Toggles.AntiAnkleBroken.Value then return end
-    local charFolder = workspace:FindFirstChild(player.Name)
-    if not charFolder then return end
-    local stats = charFolder:FindFirstChild("Stats")
-    if not stats then return end
-    local offense = stats:FindFirstChild("Offense")
-    if not offense then return end
-    local ankleBroken = offense:FindFirstChild("AnkleBroken")
-    if ankleBroken and ankleBroken:IsA("BoolValue") then
-        ankleBroken.Value = false
-    end
+    if not Toggles.AntiAnkleBroken.Value then return end
+    local charFolder = workspace:FindFirstChild(player.Name)
+    if not charFolder then return end
+    local stats = charFolder:FindFirstChild("Stats")
+    if not stats then return end
+    local offense = stats:FindFirstChild("Offense")
+    if not offense then return end
+    local ankleBroken = offense:FindFirstChild("AnkleBroken")
+    if ankleBroken and ankleBroken:IsA("BoolValue") then
+        ankleBroken.Value = false
+    end
 end
 RunService.Heartbeat:Connect(forceAnkleBroken)
 --========================================================--
 -- ANTI PUSH
 --========================================================--
 local function forceBeingPushed()
-    if not Toggles.AntiPush.Value then return end
-    local charFolder = workspace:FindFirstChild(player.Name)
-    if not charFolder then return end
-    local stats = charFolder:FindFirstChild("Stats")
-    if not stats then return end
-    local offense = stats:FindFirstChild("Offense")
-    if not offense then return end
-    local beingPushed = offense:FindFirstChild("BeingPushed")
-    if beingPushed and beingPushed:IsA("BoolValue") then
-        beingPushed.Value = false
-    end
+    if not Toggles.AntiPush.Value then return end
+    local charFolder = workspace:FindFirstChild(player.Name)
+    if not charFolder then return end
+    local stats = charFolder:FindFirstChild("Stats")
+    if not stats then return end
+    local offense = stats:FindFirstChild("Offense")
+    if not offense then return end
+    local beingPushed = offense:FindFirstChild("BeingPushed")
+    if beingPushed and beingPushed:IsA("BoolValue") then
+        beingPushed.Value = false
+    end
 end
 RunService.Heartbeat:Connect(forceBeingPushed)
